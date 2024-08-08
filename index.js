@@ -1,13 +1,17 @@
 const display = document.getElementById("display");
 
+//function to add an element to the display
 function appendToDisplay(input){
     display.value += input;
 }
 
+//function to clear display
 function clearDisplay(){
     display.value = "";
 }
 
+
+//function to calculate result
 function calculate(){
     try{
         display.value = evaluateExpression(display.value);
@@ -18,6 +22,7 @@ function calculate(){
     
 }
 
+//function to evaluate expression
 function evaluateExpression(expression) {
     const operators = expression.match(/[+\-*/]/g);
     const numbers = expression.split(/[+\-*/]/).map(Number);
